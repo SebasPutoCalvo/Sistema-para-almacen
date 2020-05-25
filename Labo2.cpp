@@ -499,5 +499,5 @@ using namespace std;
 			return 0;
   }		
 }
-}//Hecho por Sebastian Letona Solorzano 5to Computacion #17. Fecha de finalizacion 5/24/2020 a las 6 de la tarde.Me costo un poco pero aprendi de el.Hasta le cambie de colorsito Jajaja
+}//Hecho por Sebraq en 5/24/2020
 }
