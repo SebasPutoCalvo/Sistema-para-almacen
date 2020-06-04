@@ -44,7 +44,7 @@ using namespace std;
 		
 
 		switch(a){
-		case 1://Listo
+		case 1:
 			
 			system("cls");
 			cout<<"Cuantos productos desea ingresar? Maximo 5 ",cin>>num;
@@ -137,12 +137,10 @@ using namespace std;
 			
 
 
-		case 2://Listo
-		    
+		case 2:		   
 			validacion=1;
 			while(validacion==1){
-			system("cls");
-			
+			system("cls");			
 			gotoxy(25,4);
 			cout<<"    INFOPRADO"<<endl;
 			gotoxy(25,5);
@@ -152,7 +150,7 @@ using namespace std;
 			gotoxy(25,7);
 			cout<<"    Consulta Productos"<<endl;
 			gotoxy(5,8);
-			cout<<"Codigo Producto.Si la informacion no aparece,su codigo NO EXISTE:  ",cin>>codigo;//codigo
+			cout<<"Codigo Producto.Si la informacion no aparece,su codigo NO EXISTE:  ",cin>>codigo;
 			gotoxy(5,9);
 			cout<<"Nombre Producto: "<<endl;
 			gotoxy(5,10);
@@ -169,16 +167,16 @@ using namespace std;
 			for(int i=0;i<num;++i){
 				if(matriz1[i][0]==codigo){
 				gotoxy(44,9);
-				cout<<nombre[i];//nombre
+				cout<<nombre[i];
 				gotoxy(44,10);
-				cout<<matriz1[i][1];//precio costo
+				cout<<matriz1[i][1];
 				gotoxy(44,11);
-				cout<<matriz1[i][2];//precio venta
+				cout<<matriz1[i][2];
 				int ganancia= matriz1[i][2]-matriz1[i][1];
 				gotoxy(44,12);
-				cout<<ganancia;//ganancia unidad
+				cout<<ganancia;
 				gotoxy(15,13);
-				cout<<matriz1[i][3]<<endl;;//cantidad
+				cout<<matriz1[i][3]<<endl;
 				int gatot=ganancia*matriz1[i][3];
 				gotoxy(45,13);
 				cout<<gatot<<endl;
@@ -195,7 +193,7 @@ using namespace std;
 			}
 			break;
 
-		case 3://Listo
+		case 3:
 			system("cls");
 			cout<<"Cuantos clientes desea ingresar? Maximo 5 ",cin>>num2;
 			if (num2>5) {
@@ -218,7 +216,6 @@ using namespace std;
 			cout<<"   A o B"<<endl;
 			gotoxy(5,5);
 			cout<<"_____________________________________________________________________________________________"<<endl;
-			//luego
 			for(int i=0;i<num2;++i){
 				gotoxy(5,6+i);
 				cin>>NIT[i];
@@ -272,17 +269,7 @@ using namespace std;
 					gotoxy(25+(20*a),6+i);
 					cin>>matriz2[i][a];
 				}
-					//do{
-					//if(matriz2[i][3]=="A"|| matriz2[i][3]=="B"){
-					//}else{
-						//gotoxy(25+(20*a),6+i);
-						//cout<<"    "<<endl;
-						//gotoxy(25+(20*a),6+i);
-						//cin>>matriz2[i][a];
-				//}
-					//}while(matriz2[i][3]=="A"|| matriz2[i][3]=="B");
 				
-			//}
 			}
 			cout<<"Desea volver al menu o cerrar el programa? 1.Menu 2.Cerrar  ",cin>>decision;
 			if(decision==1){
@@ -293,7 +280,7 @@ using namespace std;
 
 			}
 			break;
-		case 4:	//Listo
+		case 4:	
 			validacion=1;
 			while(validacion==1){
 			system("cls");
@@ -369,17 +356,17 @@ using namespace std;
 			cout<<"Tipo Cliente: "<<endl;
 			gotoxy(5,13);
 			cout<<"_________________________________________________________________________________________"<<endl;
-			gotoxy(5,15);//coord
+			gotoxy(5,15);
 			cout<<"Codigo"<<endl;
-			gotoxy(5,16);//coord
+			gotoxy(5,16);
 			cout<<"Producto"<<endl;
-			gotoxy(25,16);//coord
+			gotoxy(25,16);
 			cout<<"Nombre Producto"<<endl;
-			gotoxy(45,16);//coord
+			gotoxy(45,16);
 			cout<<"Cantidad"<<endl;
-			gotoxy(65,16);//coord
+			gotoxy(65,16);
 			cout<<"Precio"<<endl;
-			gotoxy(85,16);//coord
+			gotoxy(85,16);
 			cout<<"Total Venta"<<endl;
 			gotoxy(5,17);
 			cout<<"__________________________________________________________________________________________"<<endl;
@@ -395,27 +382,22 @@ using namespace std;
 			cout<<"____________________________________"<<endl;
 			gotoxy(60,30);
 			cout<<"Total a Pagar"<<endl;
-			//luego
+			
 			
 			for(int i=0;i<num2;++i){
                 if(NIT[i]==nit){
-				gotoxy(24,10);//nombre
+				gotoxy(24,10);
 				cout<<matriz2[i][0];
-				gotoxy(15,12);//direccion
+				gotoxy(15,12);
 				cout<<matriz2[i][1];
-				gotoxy(54,12);//telefono
+				gotoxy(54,12);
 				cout<<matriz2[i][2];
-				gotoxy(85,12);//tipo cliente
+				gotoxy(85,12);
 				cout<<matriz2[i][3]<<endl;
 				cliente=matriz2[i][3];
 			}
 			
 			}   
-			//fin luego	
-			
-		
-			
-			//luego2
 			cout<<endl;
 			cout<<"Productos a ingresar(MAXIMO 5)?Articulos registrados "<<num<<" ,ingrese: ",cin>>productos;
 			if(productos<=num){
@@ -426,9 +408,9 @@ using namespace std;
 				for(int a=0;a<num;++a){
 			if(matriz1[a][0]==codigo){
 				gotoxy(25,18+i);
-				cout<<nombre[a];//nombre
+				cout<<nombre[a];
 				gotoxy(45,18+i);
-				cin>>cantidades[a];//cantidad
+				cin>>cantidades[a];
 				if (cantidades[a]>matriz1[a][3]){
 					gotoxy(45,18+i);
 					cout<<"No hay mucha existencia"<<endl;
@@ -437,7 +419,7 @@ using namespace std;
 				}
 			    matriz1[a][3]=matriz1[a][3]-cantidades[a];
 				gotoxy(65,18+i);
-				cout<<matriz1[a][2];//precio venta
+				cout<<matriz1[a][2];
 				 venta=cantidades[a]*matriz1[a][2];
 				gotoxy(85,18+i);
 				cout<<venta<<endl;
@@ -447,20 +429,15 @@ using namespace std;
 			
 			}
 				}
-			}
-
-	
-
+			}	
 			}else{
 				system("cls");
 				cout<<"El numero de productos excede de 5"<<endl;
 			}
-			//Inicio 3
 			gotoxy(85,25);
 			cout<<subtotal;
 			for(int i=0;i<num2;++i){
 			if(cliente=="A"){
-				
 				 descuento=subtotal*0.06;
 				 gotoxy(85,26);
 				 cout<<descuento<<endl;
@@ -480,7 +457,6 @@ using namespace std;
 			total=subc+iva;
 			gotoxy(85,30);
 			cout<<total<<endl;
-			//Fin 3
 			subtotal=0;
 			descuento=0;
 			subc=0;
@@ -494,10 +470,10 @@ using namespace std;
 				validacion=0;
 			}
 			}
-         break;
+                        break;
 		case 6:
 			return 0;
   }		
 }
-}//Hecho por Sebraq en 5/24/2020
+}//Hecho por Sebraq en 5/24/2020 
 }
